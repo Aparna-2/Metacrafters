@@ -14,12 +14,12 @@ const NFTs=[];
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-    const mintNFT=function(_name,_color,_type,_rarity){
+    const mintNFT=function(_name,_color,_fabric,_availability){
 const NFT={
     name:_name,
     color:_color,
-    type:_type,
-    rarity:_rarity,
+    fabric:_fabric,
+    availability:_availability,
 };
 NFTs.push(NFT);
 console.log('congratulation your NFT"${NFT.name}"has been minted sucessfully.n');
@@ -31,18 +31,18 @@ const printNFTs=function (){
         console.log(`ID: ${i + 1}`);
         console.log(`Name: ${NFTs[i].name}`);
         console.log(`Color: ${NFTs[i].color}`);
-        console.log(`Type: ${NFTs[i].type}`);
-        console.log(`rarity: ${NFTs[i].rarity}`);
+        console.log(`Fabric: ${NFTs[i].fabric}`);
+        console.log(`availability: ${NFTs[i].availability}`);
     }
     console.log("Finished Printing all NFTS.\n")
 };
 const getTotalSupply =function(){
     console.log('Total number of minted NFTs: ${NFTs.length}');
 };
-mintNFT("NFT 1","Black","Dance","Rare");
-mintNFT("NFT 2","Pink","Listening Music","Common");
-mintNFT("NFT 3","Yellow","Cooking","Epic");
-mintNFT("NFT 4","White","Travelling","Legendary");
+mintNFT("NFT 1","Black","Cotton","Common");
+mintNFT("NFT 2","Pink","Silk","Common");
+mintNFT("NFT 3","Yellow","Linen","Rare");
+mintNFT("NFT 4","White","Synthetic","Common");
 printNFTs();
 
 getTotalSupply();
